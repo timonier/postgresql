@@ -7,8 +7,20 @@ The PostgreSQL object-relational database system provides reliability and data i
 Linux users can use the [installer](https://github.com/timonier/postgresql/blob/master/bin/installer):
 
 ```sh
+# Define installation folder
+
+export INSTALL_DIRECTORY=/usr/bin
+
+# Use local installation
+
+sudo bin/installer install
+
+# Use remote installation
+
 curl --location "https://github.com/timonier/postgresql/raw/master/bin/installer" | sudo sh -s -- install
 ```
+
+__Note__: If you do not define `INSTALL_DIRECTORY`, `installer` will use in `/usr/local/bin`.
 
 ## Usage
 
@@ -23,9 +35,10 @@ pg_dump --help
 
 # Run pg_dump
 
-export PGHOST="postgresql-morgan.docker"
-export PGPASSWORD=""
-export PGUSER="postgres"
+export PGHOST=postgresql-morgan.docker
+export PGPASSWORD=my-super-password
+export PGUSER=postgres
+
 pg_dump api --blobs --data-only --disable-triggers --file backup.sql
 ```
 
@@ -40,9 +53,10 @@ psql --help
 
 # Run psql
 
-export PGHOST="postgresql-morgan.docker"
-export PGPASSWORD=""
-export PGUSER="postgres"
+export PGHOST=postgresql-morgan.docker
+export PGPASSWORD=my-super-password
+export PGUSER=postgres
+
 psql --file backup.sql api
 ```
 
