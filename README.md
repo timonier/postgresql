@@ -4,8 +4,6 @@ The PostgreSQL object-relational database system provides reliability and data i
 
 ## Installation
 
-Linux users can use the [installer](https://github.com/timonier/postgresql/blob/master/bin/installer):
-
 ```sh
 # Define installation folder
 
