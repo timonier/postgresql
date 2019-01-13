@@ -20,6 +20,6 @@ RUN set -e -u -x \
     && apk del --no-progress BUILD_DEPS \
     && rm -f -r /tmp/*
 
-COPY rootfs/. /
+COPY rootfs/ /
 
 ENTRYPOINT [ "dumb-entrypoint" , "docker-entrypoint.sh" ]
