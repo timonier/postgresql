@@ -26,8 +26,8 @@ case "$1" in
             cp cmd "${INSTALL_DIRECTORY}"/pg_dump
             cp cmd "${INSTALL_DIRECTORY}"/psql
         else
-            curl --location --output "${INSTALL_DIRECTORY}"/pg_dump "https://github.com/timonier/postgresql/raw/master/bin/cmd"
-            curl --location --output "${INSTALL_DIRECTORY}"/psql "https://github.com/timonier/postgresql/raw/master/bin/cmd"
+            curl --location --output "${INSTALL_DIRECTORY}"/pg_dump "https://gitlab.com/timonier/postgresql/raw/master/bin/cmd"
+            curl --location --output "${INSTALL_DIRECTORY}"/psql "https://gitlab.com/timonier/postgresql/raw/master/bin/cmd"
         fi
 
         chmod +x "${INSTALL_DIRECTORY}"/pg_dump "${INSTALL_DIRECTORY}"/psql
